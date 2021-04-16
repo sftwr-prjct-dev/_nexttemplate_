@@ -1,0 +1,48 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "ts-node --project ./node.tsconfig.json scripts/index.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export && touch ./out/.nojekyll",
+    "start": "next start",
+    "deploy:app": "npx gh-pages -d ./out -t true",
+    "deploy": "npm run build && npm run export && npm run deploy:app"
+  },
+  "keywords": [],
+  "author": "eltneg <yorewole@gmail.com> (https://eltneg.prjct.dev/)",
+  "license": "MIT",
+  "dependencies": {
+    "next": "10.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sftwr-prjct-dev/oneclick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sftwr-prjct-dev/oneclick/issues"
+  },
+  "homepage": "https://github.com/sftwr-prjct-dev/oneclick#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "gh-pages": "3.1.0",
+    "jest": "^26.6.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.5",
+    "ts-jest": "^26.4.1",
+    "ts-node": "9.1.1",
+    "typescript": "^4.0.3"
+  }
+}
